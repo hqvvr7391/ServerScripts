@@ -4,7 +4,7 @@ echo "Initialize Alpine"
 echo "hostname?"
 read hostname
 
-wget https://github.com/hqvvr7391/ServerScript/Alpine/initializefile initializefile
+wget https://github.com/hqvvr7391/ServerScript/blob/master/Alpine/initializefile initializefile
 sed -i "s/<%HOSTNAME>/$hostname/g" initializefile
 setup-alpine -f initializefile
 
