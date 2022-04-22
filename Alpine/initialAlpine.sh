@@ -12,15 +12,15 @@ setup-alpine -f initializefile
 /etc/init.d/networking --quiet start &
 
 
-sed '3s/# //' /etc/apk/repositories
+sed -i '3s/# //' /etc/apk/repositories
 
 
 apk add sudo
 echo "username?"
 read username
-adduser add $username
+adduser "$username"
 echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel
-adduser $username wheel
+adduser "$username" wheel
 
 apk upgrade --available && sync
 apk update
