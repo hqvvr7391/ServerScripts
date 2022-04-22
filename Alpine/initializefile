@@ -25,7 +25,7 @@ iface eth0 inet dhcp
 TIMEZONEOPTS="-z Asia/Seoul"
 
 # set http/ftp proxy
-#PROXYOPTS="http://webproxy:8080"
+PROXYOPTS="none"
 
 # Add a random mirror
 APKREPOSOPTS="-1"
