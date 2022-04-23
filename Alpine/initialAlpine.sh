@@ -8,4 +8,11 @@ wget "https://raw.githubusercontent.com/hqvvr7391/ServerScripts/master/Alpine/in
 sed -i "s/<%HOSTNAME>/$hostname/g" initializefile
 setup-alpine -f initializefile
 
-reboot
+mkdir /mnt/test3
+mount /dev/sda3 /mnt/test3
+wget "https://raw.githubusercontent.com/hqvvr7391/ServerScripts/master/Alpine/postinitial.sh"
+chmod +x postinitial.sh
+
+umount /mnt/test3
+
+#reboot
