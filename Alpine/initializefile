@@ -37,7 +37,7 @@ SSHDOPTS="-c openssh"
 NTPOPTS="-c openntpd"
 
 # Use /dev/sda as a data disk
-DISKOPTS="-m sys /dev/sda"
+DISKOPTS="-m lvmsys /dev/sda"
 
 # Setup in /media/sdb1
 #LBUOPTS="/media/sdb1"
