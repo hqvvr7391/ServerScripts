@@ -25,5 +25,3 @@ apk update
 
 passwd -l root
 rm ./postinitial.sh
-
-reboot
