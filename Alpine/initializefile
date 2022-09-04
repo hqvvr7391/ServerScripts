@@ -34,10 +34,10 @@ APKREPOSOPTS="-1"
 SSHDOPTS="-c openssh"
 
 # Use openntpd
-NTPOPTS="-c openntpd"
+NTPOPTS="-c chrony"
 
 # Use /dev/sda as a data disk
-DISKOPTS="-L sys /dev/sda"
+DISKOPTS="-L -m sys /dev/sda"
 
 # Setup in /media/sdb1
 #LBUOPTS="/media/sdb1"

@@ -1,0 +1,13 @@
+vi /etc/apk/repositories
+
+apk update
+apk add parted e2fsprogs-extra
+
+parted
+resizepart {} 100%
+
+pvresize /dev/sda2
+lvextend -l +100%FREE /dev/vg0/lv_root
+
+resize2fs /dev/vg0/lv_root
+reboot
